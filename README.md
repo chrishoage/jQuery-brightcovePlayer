@@ -41,6 +41,11 @@ This jQuery plugin wraps the [Brightcove Smart Player API](http://support.bright
  * **mediaSeekNotify**
   * Fires when the media has been seeked
 
+##List of Plugin Methods
+ * ``$('#player').brightcovePlayer('play')``
+ * ``$('#player').brightcovePlayer('pause')``
+ * ``$('#player').brightcovePlayer('seek', time)``
+
 ##Development:
 
 Run ``npm install`` to install dev dependencies.
