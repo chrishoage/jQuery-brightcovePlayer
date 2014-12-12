@@ -1,0 +1,19 @@
+{
+	"strict": true,
+	"camelcase": true,
+	"newcap": true,
+	"undef": true,
+	"browser": true,
+	"unused": true,
+	"latedef": true,
+	"immed": true,
+	"indent": 2,
+	"jquery": true,
+	"devel": true,
+	"smarttabs": true,
+	"quotmark": "single",
+	"globals": {
+		 "log": true,
+		 "config": true
+	}
+}
