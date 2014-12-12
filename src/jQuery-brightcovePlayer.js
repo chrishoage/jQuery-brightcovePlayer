@@ -111,6 +111,7 @@
 			this.each(function() {
 				var pluginInstance = $.data(this, 'plugin_' + pluginName);
 				if (!pluginInstance) {
+					if (typeof options !== 'object') $.error(pluginName + ' has not been initialized yet');
 					$.data(this, 'plugin_' + pluginName, new Plugin(this, options));
 				} else {
 					if (!pluginInstance[method]) {
