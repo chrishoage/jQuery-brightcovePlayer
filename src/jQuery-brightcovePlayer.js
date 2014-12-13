@@ -43,6 +43,7 @@
 			destroy: function () {
 				this.unbindTriggers();
 				this.$el.empty();
+				this.$el.data('plugin_' + pluginName, null);
 			},
 			pause: function () {
 				this.playerModule.pause();
