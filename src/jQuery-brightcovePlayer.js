@@ -57,6 +57,10 @@
 			loadVideo: function (videoID) {
 				this.playerModule.loadVideoByID(videoID);
 			},
+			//Only works with HTML player (I.E. on mobile or when forceHTML is called)
+		        setSize: function (width, height) {
+		                this.experienceModule.setSize(width, height);
+		        },
 			_createPlayerObject: function () {
 				var $playerObject = $('<object>', {
 					class: 'BrightcoveExperience'
@@ -72,6 +76,7 @@
 					value: this._createBrightcoveCallback(function (experienceID) {
 						this.player = brightcove.api.getExperience(experienceID);
 						this.playerModule = this.player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER);
+						this.experienceModule = this.player.getModule(brightcove.api.modules.APIModules.EXPERIENCE);
 						console.log('playerModule', this.playerModule);
 						this.$el.trigger('playerLoaded.' + pluginName);
 					})
