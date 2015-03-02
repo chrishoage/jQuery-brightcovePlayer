@@ -59,7 +59,9 @@
     },
     //Only works with HTML player (I.E. on mobile or when forceHTML is called)
     setSize: function (width, height) {
-      this.experienceModule.setSize(width, height);
+      if (experienceModule.experience.type == "html") {
+        experienceModule.setSize(resizeWidth, resizeHeight)
+      }
     },
     _createPlayerObject: function () {
       var $playerObject = $('<object>', {
