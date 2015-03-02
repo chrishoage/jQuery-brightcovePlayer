@@ -60,7 +60,7 @@
     //Only works with HTML player (I.E. on mobile or when forceHTML is called)
     setSize: function (width, height) {
       if (experienceModule.experience.type == "html") {
-        experienceModule.setSize(resizeWidth, resizeHeight)
+        experienceModule.setSize(width, height)
       }
     },
     _createPlayerObject: function () {
